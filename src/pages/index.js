@@ -6,18 +6,14 @@ const IndexPage = ({data}) => (
   <div>
     
       {data.allContentfulBand.edges.map(({ node }) => (
-       <tr> 
-        <td>
-          {node.name}
-        </td>
-        <td>
-          {node.genere}
-        </td>
-        <td>
-          {node.website}
-        </td>
-        </tr> 
         
+        <div><h3>{node.name}</h3> <img src={node.image.url}
+        alt={node.image.title}/>
+        <p>{node.about.about}</p>
+        <a href={node.website}>click here to listen to the music of {node.name}</a>
+        </div>
+        
+         
       ))
       }  
   </div>
@@ -35,6 +31,13 @@ export const data = graphql`query{
         genere
         name
         website
+        about {
+          about
+        }
+        image {
+          url
+          title
+        }
       }
     }
   }
