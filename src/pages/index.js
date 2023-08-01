@@ -7,8 +7,7 @@ const IndexPage = ({data}) => (
     
       {data.allContentfulBand.edges.map(({ node }) => (
         
-        <div><h3>{node.name}</h3> <img src={node.image.url}
-        alt={node.image.title}/>
+        <div><h3>{node.name}</h3> 
         <p>{node.about.about}</p>
         <a href={node.website}>click here to listen to the music of {node.name}</a>
         </div>
