@@ -33,10 +33,6 @@ export const data = graphql`query{
         about {
           about
         }
-        image {
-          url
-          title
-        }
       }
     }
   }
