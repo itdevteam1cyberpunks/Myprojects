@@ -10,11 +10,10 @@ const IndexPage = ({data}) => (
         <div><h3>{node.name}</h3> 
         <p>{node.about.about}</p>
         <a href={node.website}>click here to listen to the music of {node.name}</a>
-        </div>
-        
-         
+        </div> 
       ))
-      }  
+      } 
+      <h5>Thank you for visiting</h5> 
   </div>
 )
 
