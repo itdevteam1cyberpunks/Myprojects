@@ -13,7 +13,7 @@ const IndexPage = ({data}) => (
         </div> 
       ))
       }
-      {console.log(process.env.REACT_VAR)}
+      <h1>{process.env.REACT_VAR}</h1>
   </div>
 )
 
