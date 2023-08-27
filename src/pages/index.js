@@ -1,10 +1,10 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-
+import * as React from "react";
+import { graphql } from "gatsby";
 
 const IndexPage = ({data}) => (
+  
   <div>
-    
+      
       {data.allContentfulBand.edges.map(({ node }) => (
         
         <div>
@@ -12,11 +12,10 @@ const IndexPage = ({data}) => (
           <h3>{node.name}</h3> 
         <p>{node.about.about}</p>
         <a href={node.website}>click here to listen to the music of {node.name}</a>
-        </div>
-        
-         
+        </div> 
       ))
-      }  
+      }
+      <h1>{process.env.REACT_VAR}</h1>
   </div>
 )
 
