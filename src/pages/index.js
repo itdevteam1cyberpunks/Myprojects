@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 const IndexPage = ({data}) => (
   
   <div>
-      
+      <h1>Hi Welcome to,{process.env.GATSBY_VAR}</h1>
       {data.allContentfulBand.edges.map(({ node }) => (
         
         <div><h3>{node.name}</h3> 
@@ -13,7 +13,7 @@ const IndexPage = ({data}) => (
         </div> 
       ))
       }
-      <h1>{process.env.GATSBY_VAR}</h1>
+      
   </div>
 )
 
