@@ -4,17 +4,16 @@ import { graphql } from "gatsby"
 
 const IndexPage = ({data}) => (
   <div>
-    
+      <h1>Hi Wlecom to, {process.env.GATSBY_VAR}</h1>
       {data.allContentfulBand.edges.map(({ node }) => (
         
         <div><h3>{node.name}</h3> 
         <p>{node.about.about}</p>
         <a href={node.website}>click here to listen to the music of {node.name}</a>
         </div>
-        
-         
       ))
       }  
+
   </div>
 )
 
